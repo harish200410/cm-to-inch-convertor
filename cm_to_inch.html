@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Page Cv</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    #cmtoinch {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .input, .submit, .output {
+      margin-bottom: 15px;
+
+    }
+    .input input {
+      width: 95%;
+      padding: 10px;
+      border-radius: 4px;
+      border: 2px solid #ccc;
+    }
+    .submit button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit button:hover {
+      background-color: #218838;
+    }
+    .output p {
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+
+  
+  
+</head>
+<body>
+<div id="cmtoinch">
+  <h1>cm to inches</h1>
+  <div class="input">
+    <input type="text" class="inputclass" id="inputid" placeholder="Enter cm">
+  </div>
+  <div class="submit">
+    <button id="submit" class="submit" onclick="inch()">Submit</button>
+  </div>
+  <div class="output">
+    <p id="output" class="output" ></p>
+  </div>
+</div>
+
+
+
+
+<script>
+  function inch() {
+    let cm = Number(document.getElementById("inputid").value);
+    let inch = cm / 2.54;
+    inch = inch.toFixed(2); // Round to 2 decimal places
+    document.getElementById("output").innerHTML = inch + " inches";
+  }
+</script>
+
+
+
+</body>
+</html> 
